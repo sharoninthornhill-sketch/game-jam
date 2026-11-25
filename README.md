@@ -99,3 +99,22 @@ Run App does not require GitHub sign-in. See Zero Troubleshooting for help with 
 conflicts or failed pushes. See the [repository and push guide](https://github.com/codepetca/zero/blob/main/docs/GETTING-STARTED.md#your-individual-workflow).
 
 Canonical starter source: https://github.com/codepetca/zero-starter
+
+# Toast to the Moon
+
+A simple Zero Java arcade game made for the **Toast to the Moon** jam (`sharoninthornhill-sketch/game-jam`).
+
+## How to Play
+1. Click the game canvas to focus it.
+2. Press **Space**, **Up / W**, or **Left / Right (A / D)** to launch your toast toward the moon.
+3. Steer left and right with **Left / Right** or **A / D** (hold **Space / Up / W** for extra upward thrust).
+4. Dodge the moving grey rocks, collect yellow butter (`+10` points each), and reach the moon (`+50` points) to win.
+5. Click **Restart** anytime to reset the run.
+
+## Project Structure
+* `src/main/java/Main.java` — Game loop, movement, collision detection, scoring, rendering, and `Restart` control.
+
+## Jam Details
+* **Jam:** Toast to the Moon (ZeroHub / ZeroJams)
+* **Submissions Close:** Fri Nov 27, 2026 · 7:00 a.m. (America/Toronto)
+* **Gallery Opens:** Mon Nov 30, 2026 · 7:00 a.m. (America/Toronto)
