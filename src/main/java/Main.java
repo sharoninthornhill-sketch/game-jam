@@ -13,10 +13,11 @@ public class Main extends GameApp {
     private int score;
     private Label info;
 
-    private double[] rx = {80, 420, 160, 480, 90, 390};
-    private double[] ry = {320, 320, 220, 220, 130, 130};
+    // Moving space rocks & golden butter boosts on the way to the moon
+    private double[] rx = {90, 430, 170, 470, 110, 380};
+    private double[] ry = {320, 320, 225, 225, 135, 135};
     private double[] rvx = {95, -85, -110, 110, 130, -130};
-    private double[] bx = {260, 320, 210};
+    private double[] bx = {265, 320, 220};
     private double[] by = {300, 205, 115};
     private boolean[] got = new boolean[3];
 
@@ -63,7 +64,7 @@ public class Main extends GameApp {
             vy = -195;
         }
         if (started) {
-            vx = (r ? 210 : 0) - (l ? 210 : 0);
+            vx = (r ? 215 : 0) - (l ? 215 : 0);
             vy = Math.max(-240, Math.min(-75, vy + (up ? -140 : -65) * dt));
             px = Math.max(0, Math.min(width() - SIZE, px + vx * dt));
             py += vy * dt;
@@ -83,7 +84,7 @@ public class Main extends GameApp {
             if (!got[i] && hits(px, py, SIZE, SIZE, bx[i], by[i], 16, 16)) {
                 got[i] = true;
                 score += 10;
-                info.setText("Score: " + score + " | Grabbed butter!");
+                info.setText("Score: " + score + " | Butter collected (+10)!");
             }
         }
 
@@ -91,12 +92,12 @@ public class Main extends GameApp {
         if (hits(px, py, SIZE, SIZE, moonX, 45, 56, 56)) {
             done = true;
             score += 50;
-            info.setText("Score: " + score + " | Toast reached the Moon!");
+            info.setText("Score: " + score + " | Toast on the Moon (+50)! You win!");
         }
     }
 
     @Override public void draw() {
-        background(Color.rgb(12, 18, 38));
+        background(Color.rgb(14, 20, 42));
 
         // Moon
         fill(Color.rgb(252, 242, 190));
